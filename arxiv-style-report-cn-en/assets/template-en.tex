@@ -1,0 +1,94 @@
+﻿%--------------------------------------------------------------------------------
+\documentclass{article}
+
+
+%--------------------------------------------------------------------------------
+\usepackage{arxiv}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{xurl}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage{amsmath,amsfonts}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{natbib}
+\usepackage{doi}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{placeins}
+
+
+%--------------------------------------------------------------------------------
+\geometry{margin=1in}
+\setstretch{1.25}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0pt}
+\renewcommand{\arraystretch}{1.5}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\captionsetup{font=small,labelfont=bf}
+\titlespacing*{\section}{0pt}{1.3ex plus 0.2ex minus 0.1ex}{0.7ex}
+\titlespacing*{\subsection}{0pt}{0.9ex plus 0.2ex minus 0.1ex}{0.5ex}
+
+
+%--------------------------------------------------------------------------------
+\title{Report Title}
+\author{Author Name \\
+Institution \\
+\texttt{email@example.com}}
+\date{\today}
+\renewcommand{\shorttitle}{Structured Report}
+
+\hypersetup{
+  pdftitle={Report Title},
+  pdfauthor={Author Name},
+  pdfkeywords={keyword1, keyword2}
+}
+
+
+%--------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+
+%--------------------------------------------------------------------------------
+\begin{abstract}
+\input{sections/00_abstract}
+\end{abstract}
+
+\keywords{market research \and weighted scoring \and report pipeline}
+
+
+%--------------------------------------------------------------------------------
+\input{sections/01_background}
+\input{sections/02_related_work}
+\input{sections/03_methods}
+\input{sections/04_experiments}
+\input{sections/05_discussion}
+\input{sections/06_conclusion}
+
+
+%--------------------------------------------------------------------------------
+\appendix
+\input{sections/07_appendix_samples}
+
+
+%--------------------------------------------------------------------------------
+% Uncomment the bibliography block below when the report actually uses citation keys.
+% \bibliographystyle{unsrtnat}
+% \bibliography{references}
+
+
+%--------------------------------------------------------------------------------
+\end{document}
+

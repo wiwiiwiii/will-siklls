@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "arXiv Report CN+EN"
+  short_description: "Auto-trigger for report/paper/PDF tasks; direct Data->TeX->PDF with citation-ready structure"
+  default_prompt: "Automatically treat this task as a formal report workflow when intent matches report/paper/PDF delivery, and generate a direct Data->TeX->PDF output with traceable citations."

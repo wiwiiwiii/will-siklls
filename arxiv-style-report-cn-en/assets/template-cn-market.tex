@@ -1,0 +1,128 @@
+﻿%--------------------------------------------------------------------------------
+\documentclass{article}
+
+
+%--------------------------------------------------------------------------------
+\usepackage{arxiv}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{unicode-math}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{xurl}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage{amsmath,amsfonts}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{placeins}
+
+
+%--------------------------------------------------------------------------------
+\geometry{a4paper,left=20mm,right=20mm,top=18mm,bottom=22mm,headheight=12pt,headsep=10pt,footskip=16pt}
+\setmainfont{Times New Roman}
+\IfFontExistsTF{SimSun}{
+  \IfFontExistsTF{SimHei}{
+    \setCJKmainfont[BoldFont=SimHei]{SimSun}
+  }{
+    \setCJKmainfont{SimSun}
+  }
+  \setCJKmonofont{SimSun}
+}{
+  \IfFontExistsTF{NSimSun}{
+    \IfFontExistsTF{SimHei}{
+      \setCJKmainfont[BoldFont=SimHei]{NSimSun}
+    }{
+      \setCJKmainfont{NSimSun}
+    }
+    \setCJKmonofont{NSimSun}
+  }{
+    \setCJKmainfont{STSong}
+    \setCJKmonofont{STSong}
+  }
+}
+\IfFontExistsTF{STIX Two Math}{
+  \setmathfont{STIX Two Math}
+}{
+  \IfFontExistsTF{XITS Math}{
+    \setmathfont{XITS Math}
+  }{
+    \setmathfont{Latin Modern Math}
+  }
+}
+
+\setstretch{1.45}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0pt}
+\renewcommand{\arraystretch}{1.5}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\captionsetup{font=small,labelfont=bf}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\renewenvironment{abstract}{
+  \centerline{\large\bfseries 摘要}
+  \begin{quote}
+}{
+  \end{quote}
+}
+\def\keywordname{{\bfseries 关键词}}
+\titlespacing*{\section}{0pt}{1.1ex plus 0.2ex minus 0.1ex}{0.7ex}
+\titlespacing*{\subsection}{0pt}{0.9ex plus 0.2ex minus 0.1ex}{0.5ex}
+\titlespacing*{\subsubsection}{0pt}{0.8ex plus 0.2ex minus 0.1ex}{0.4ex}
+
+\makeatletter
+\renewcommand{\headeright}{}
+\renewcommand{\undertitle}{}
+\renewcommand{\@toptitlebar}{\hrule height 1.2\p@\vskip 0.14in\vskip-\parskip}
+\renewcommand{\@bottomtitlebar}{\vskip 0.16in\vskip-\parskip\hrule height 1.2\p@\vskip 0.04in}
+\makeatother
+
+
+%--------------------------------------------------------------------------------
+\title{市场调研报告标题}
+\author{作者姓名 \\
+机构名称 \\
+\texttt{email@example.com}}
+\date{\today}
+\renewcommand{\shorttitle}{市场调研报告}
+
+
+%--------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+
+%--------------------------------------------------------------------------------
+\begin{abstract}
+\input{sections/00_abstract}
+\end{abstract}
+
+\keywords{市场调研 \and 加权量化 \and 用户反馈}
+
+
+%--------------------------------------------------------------------------------
+\input{sections/01_background}
+\input{sections/02_related_work}
+\input{sections/03_methods}
+\input{sections/04_experiments}
+\input{sections/05_discussion}
+\input{sections/06_conclusion}
+
+
+%--------------------------------------------------------------------------------
+\appendix
+\input{sections/07_appendix_samples}
+
+
+%--------------------------------------------------------------------------------
+\end{document}

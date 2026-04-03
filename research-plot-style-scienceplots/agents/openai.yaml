@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "Research Plot Style"
+  short_description: "Auto-trigger for chart/visualization tasks; scienceplots + muted palette + PDF-only output"
+  default_prompt: "Automatically apply this plotting style whenever the task intent includes charts/visualization polishing, and produce publication-ready PDF plots with readable labels and anti-overlap layout."
